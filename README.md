@@ -1,0 +1,1 @@
+Es una 1era practica con DJANGO CON PATRON MVT. Blog con página de inicio, posts y acceso al panel administracion. 

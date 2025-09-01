@@ -1,0 +1,26 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+
+# Archivos de logs
+*.log
+
+# Archivos temporales de editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Archivos de base de datos SQLite (si no querés subirlos)
+db.sqlite3
+
+# Archivos de migraciones compiladas
+*/migrations/__pycache__/

@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %}Posts · TuPrimeraPagina{% endblock %}
+{% block content %}
+  <h2>Posts</h2>
+  {% if posts %}
+    <ul class="list-group">
+      {% for p in posts %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="/blog/{{ p.slug }}/">{{ p.title }}</a>
+          <small class="text-muted">{{ p.created_at|date:'d/m/Y H:i' }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay posts todavía. Crealos desde <a href="/admin/">admin</a>.</p>
+  {% endif %}
+{% endblock %}
