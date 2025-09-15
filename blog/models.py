@@ -1,6 +1,4 @@
 from django.db import models
-
-# Create your models here.
 from django.utils.text import slugify
 
 class Post(models.Model):
@@ -8,7 +6,8 @@ class Post(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-
+    imagen = models.ImageField(upload_to='posts/', null=True, blank=True)
+    
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)[:50]
